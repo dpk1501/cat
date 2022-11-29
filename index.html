@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>cat</title>
+    <style media="screen">
+    /* кот */
+    .cat {
+      width: 290px;
+      height: 290px;
+      display: block;
+      position: relative;
+      margin: 200px 30%;
+      background: url('images/cat.png');
+    }
+    .pop {
+      width: 290px;
+      height: 290px;
+      display: block;
+      position: relative;
+      animation: pop 1s steps(1) infinite;
+    }
+    .cat:hover {
+        transform: scale(1.5);
+    }
+    /* еда */
+    .food-1 {
+      width: 530px;
+      height: 530px;
+      position: absolute;
+      background: url("images/food.png");
+      transform: scale(0.2)
+    }
+    .fly {
+      width: 530px;
+      height: 530px;
+      position: absolute;
+      animation: fly 1s ease-in-out infinite;
+    }
+    /* .food-2 {
+      width: 780px;
+      height: 780px;
+      position: absolute;
+      background: url("images/cry.png");
+      transform: scale(0.1)
+    }
+    .fly-2 {
+      width: 780px;
+      height: 780px;
+      position: absolute;
+      animation: fly-2 1s ease-in-out infinite;
+      animation-delay: 1s;
+    } */
+    /* анимация кота */
+    @keyframes pop {
+      /* 0% {background-position: 0 0;}
+      10% {background-position: -290px 0;}
+      20% {background-position: -580px 0;}
+      30% {background-position: -1450px 0;}
+      40% {background-position: -1740px 0;}
+      50% {background-position: -2030px 0;}
+      60% {background-position: -2320px 0;}
+      70% {background-position: -2610px 0;}
+      80% {background-position: -2900px 0;}
+      90% {background-position: -3190px 0;} */
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: -1600px 0;
+      }
+}
+      @keyframes fly {
+      /* 0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100%{
+      transform: translate(-50%, -50%) rotate(180deg);
+      } */
+      0% {left: 50%; top: 0px;}
+      100% { left: 25%; top: 87px;}
+      }
+      /* @keyframes fly-2 {
+      /* 0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100%{
+      transform: translate(-50%, -50%) rotate(180deg);
+      } */
+      /* 0% {left: 50%; top: 0px;}
+      100% {opacity: 0; left: 25%; top: 87px;}
+      } */ */
+    </style>
+  </head>
+  <body>
+  <div class="cat pop"></div>
+  <div class="food-1 fly"></div>
+  <!-- <div class="food-2 fly-2"></div> -->
+  </body>
+</html>
